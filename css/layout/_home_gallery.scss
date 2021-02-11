@@ -1,0 +1,115 @@
+/*_gallery.scss*/
+.gallery {width: 100%
+	
+}
+.gallery-container {
+	width: 100%;
+}
+
+.gallery-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.gallery-item {
+	float: left;
+}
+
+.gallery-i-img {
+	width: 100%;
+	height: auto;
+}
+
+.gallery-i-p {
+	text-align: left;
+	width: 100%;
+	padding-top: 10px;
+	color: $darkgreyfont;
+}
+.gallery-more {
+	display: inline-block;
+}
+
+
+@media screen and (max-width: 350px) {
+	.gallery-item {
+		width: 98%;
+		height: auto;
+		margin: 10px 1%; 
+		padding: 0;
+	}
+	.gallery-i-p {
+		padding: 0px 0 0;
+		font-size: 90%;
+	}
+	.gallery-more {
+		margin: 10px auto 00px auto;
+		font-size: 80%;
+		overflow-wrap: break-word;
+	}
+}
+
+@media screen and (min-width: 350px) and (max-width: 600px) {
+	.gallery {}
+	.gallery-container {	
+		max-width: $mobile-max;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.gallery-item {
+		width: calc(98%/2);
+		height: auto;
+		margin: 10px 0.5% 0; 
+		padding: 10px 0 0;
+	}
+	.gallery-i-p {
+		padding-top: 5px;
+		font-size: 90%;
+	}
+	.gallery-more {
+		font-size: 90%;
+		margin: 50px auto 10px auto;
+	}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: $tab-max) {
+	.gallery {}
+	.gallery-container {
+		max-width: 1024px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.gallery-item {
+		width: calc(94%/3);
+		height: auto;
+		margin: 10px 1%; 
+		padding: 10px 0;
+	}
+	.gallery-i-p {
+		padding-top: 10px;
+		font-size: 90%;
+	}
+	.gallery-more {
+		margin: 50px auto 20px auto;
+	}
+}
+@media screen and (min-width: $comp-min) {
+	.gallery {}
+	.gallery-container {}
+	.gallery-item {
+		width: calc(95%/5);
+		height: auto;
+		margin: 10px 0.2%; 
+		padding: 10px 0;
+	}
+
+	.gallery-i-p {
+		padding-top: 10px;
+		font-size: 90%;
+	}
+	.gallery-more {
+		margin: 50px auto 20px auto;
+	}
+
+}

@@ -1,0 +1,91 @@
+
+
+#bg-img-div {
+	position: relative;
+}
+.bg-img-div-container {
+	min-width: 100vw;
+	width: 100%;
+	position: absolute;
+	//../../individual_components/img/bg-img.jpg
+	background: url(../../img/accounting-bg.jpg) no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+	filter: blur(3px);
+}
+.layer {
+	background-color: rgba(255, 102, 102,0.6);
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.layer-head {
+	/*position: absolute;*/
+	position: relative;
+	color: $white;
+	text-align: center;
+	filter: blur(0);
+}
+
+.layer-para {
+	color: $white;
+	text-align: center;
+	filter: blur(0);
+	position: relative;
+
+
+}
+
+@media screen and (max-width: $mobile-max) {
+	.bg-img-div-container, #bg-img-div {
+		height: 200px;
+	}
+	
+	p.layer-head {
+		font-size: 125%;
+		top: 50px;
+		line-height: 120%;
+	}
+
+	p.layer-para {
+		font-size: 90%;
+		line-height: 130%;
+		top: 70px;
+	}
+}
+@media screen and (min-width: $tab-min) and (max-width: $tab-max) {
+	.bg-img-div-container, #bg-img-div {
+		height: 250px;
+
+	}
+	p.layer-head {
+		font-size: 210%;
+		top: 60px;
+		line-height: 130%;
+	}
+
+	p.layer-para {
+		font-size: 115%;
+		line-height: 130%;
+		top: 70px;
+	}
+}
+@media screen and (min-width: $comp-min) {
+	.bg-img-div-container, #bg-img-div {
+		height: 300px;
+	}
+
+	p.layer-head {
+		font-size: 250%;
+		top: 100px;
+		line-height: 130%;
+	}
+
+	p.layer-para {
+		font-size: 115%;
+		line-height: 130%;
+		top: 130px;
+	}
+}

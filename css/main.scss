@@ -1,0 +1,34 @@
+/*cd Desktop\html\vcexperiment>cd template\css*/
+/*sass --watch main.scss:main.css*/
+
+@import "base/_mixins";
+@import "base/_colors";
+@import "base/text-size";
+@import "base/_breakpoints";
+@import "base/_placeholders";
+@import "base/_base";
+@import "layout/_header2";
+/*@import "layout/_banner_video";*/
+@import "layout/_banner_video2";
+@import "layout/_home_services";
+@import "layout/_banner_intro";
+@import "layout/_home_about";
+@import "layout/_home_section1";
+@import "layout/_home_flow";
+@import "layout/_bg-img";
+@import "layout/_home_past_trainee";
+@import "layout/_home_partners";
+@import "layout/_home_testimonial";
+@import "layout/_home_gallery";
+@import "layout/_footer";
+@import "components/_buttons";
+
+
+/*pages*/
+@import "pages/_about";
+@import "pages/_contact";
+@import "pages/_apply";
+@import "pages/_prog";
+@import "pages/_testimonial";
+/*@import "";*/
+/*@import "";*/

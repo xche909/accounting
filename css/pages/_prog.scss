@@ -1,0 +1,208 @@
+/*page-prog.scss*/
+/*@import "../../template/css/main.scss";*/
+
+
+#prog {
+	position: relative;	
+	width: 100%;
+	background: #f7f7f7 url('../img/accounting-bg.jpg') fixed center center;
+	padding: 40px 0 10px;
+
+}
+
+.prog-container {
+	position: relative;
+	margin: 0 auto;
+}
+
+.prog {
+	background-color: white;
+
+}
+.prog-head, .prog-sub-head, .prog-duration-div, .prog-duration {
+	text-align: center;
+}
+.prog-duration-div {
+	width: 100%;
+}
+.prog-duration {
+
+}
+ul.prog-points {
+	list-style-type: none;
+
+	li::before {
+		content: "\25b8";
+		border-radius: 50%;
+		padding: 2px 4px;
+		background-color: #7AAF6A;
+		color: white;
+		font-size: 20px;
+		margin-right: 10px; 
+	}
+
+	li {
+
+	}
+}
+.prog-page-head {
+	text-align: center;
+}
+
+.info-prog-div, .price {
+	display: none;
+}
+.more-btn, .price-btn {
+	cursor: pointer;
+}
+.price {
+	width: max-content;
+	display: none;
+	background-color: #26601A;
+	border: 1px solid #26601A;
+}
+
+.more-btn, .price-btn {
+	display: block;
+}
+
+.price, .more-btn, .price-btn {
+	padding: 10px 20px;
+	color: white;
+	margin: 10px auto;
+}
+
+.more-btn, .price-btn {
+	background-color: #7AAF6A;
+	border: 1px solid #7AAF6A;
+}
+
+@media screen and (max-width: $mobile-max) {
+	.prog-container {
+		max-width: 500px;
+		width: 100%;	
+	}
+	.prog-page-head {
+		font: bold 150%/130% sans-serif;
+		color: white;
+	}
+	.prog {
+		width: 98%;
+		margin: 20px 1%;
+		padding: 10px 0 1px;
+	}
+	.prog-head {
+		font: bold 130%/130% serif;
+		padding: 5px;
+	} 
+	.prog-sub-head{
+		font: bold 110%/130% serif;
+		padding: 10px 5px;
+	}
+	.prog-duration { 
+		font: bold 100%/130% sans-serif;
+		padding: 5px;
+
+	}
+
+	ul.prog-points {
+		padding-top: 10px;
+		li::before {
+			padding: 1px 3px;
+			font-size: 15px;
+			margin-right: 5px; 
+		}
+
+		li {
+			font: normal 90%/150% sans-serif;
+			padding: 10px;
+		}
+	}
+	.price, .more-btn, .price-btn {
+		font: normal 100%/130% sans-serif;
+	}
+}
+/*----------------------------------------------*/
+@media screen and (min-width: $tab-min) and (max-width: $tab-max) {
+	.prog-container {
+		max-width: 700px;
+		width: 100%;	
+	}
+	.prog-page-head {
+		font: bold 170%/130% sans-serif;
+		color: white;
+	}
+	.prog {
+		width: 96%;
+		margin: 20px 2%;
+		padding: 20px;
+	}
+	.prog-head {
+		font: bold 150%/130% serif;
+		padding: 10px;
+	} 
+	.prog-sub-head{
+		font: bold 130%/130% serif;
+		padding: 10px 10px;
+	}
+	.prog-duration { 
+		font: bold 100%/130% sans-serif;
+		padding: 10px 10px;
+
+	}
+	ul.prog-points {
+		padding-top: 10px;
+
+		li {
+			font: normal 90%/150% sans-serif;
+			padding: 10px;
+		}
+	}
+	.price, .more-btn, .price-btn {
+		font: normal 110%/130% sans-serif;
+	}
+}
+/*----------------------------------------------*/
+@media screen and (min-width: $comp-min) {
+	.prog-container {
+		max-width: 800px;
+		width: 100%;	
+	}
+	.prog-page-head {
+		font: bold 200%/130% sans-serif;
+		color: white;
+	}
+	.prog {
+		width: 98%;
+		margin: 20px 1%;
+		padding: 20px;
+	}
+	.prog-head {
+		font: bold 180%/130% serif;
+		padding: 10px;
+	} 
+	.prog-sub-head{
+		font: bold 150%/130% serif;
+		padding: 10px 10px;
+	}
+	.prog-duration { 
+		font: bold 100%/130% sans-serif;
+		padding: 10px 10px;
+
+	}
+	ul.prog-points {
+		padding-top: 10px;
+
+		li {
+			font: normal 100%/150% sans-serif;
+			padding: 10px;
+		}
+	}
+	.price, .more-btn, .price-btn {
+		font: normal 120%/130% sans-serif;
+	}
+
+}
+
+
+

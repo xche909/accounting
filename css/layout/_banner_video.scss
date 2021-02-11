@@ -1,0 +1,36 @@
+/*mobile
+height 100% -- width auto -- overflow hidden -- position check*/
+.container-banner-video{
+	position: relative;
+}
+
+@media screen and (max-width: $mobile-max) {
+	#iframe-banner-video {
+		/*height: 100vh;
+		min-height: 100%;
+		width: 100%;*/
+		width: 100vw;
+		min-width: 100%;
+		height: 50vw;	
+	}
+}
+
+/*tab*/
+@media screen and (min-width: $tab-min) and (max-width: $tab-max) {
+	#iframe-banner-video {
+		width: 100vw;
+		min-width: 100%;
+		min-height: 50vw;
+		height: auto;
+	}
+}
+
+/*large comp*/
+@media screen and (min-width: $comp-min) {
+	#iframe-banner-video {
+		width: 100vw;
+		min-width: 100%;
+		min-height: 570px;
+		height: auto;
+	}	
+}

@@ -1,0 +1,184 @@
+/*_home_flow.scss*/
+/*sass --watch _home_flow.scss:home_flow.css*/
+
+$space: 5px;
+$margin: 50px;
+$border-width: 2px;
+$last-size: 100px;
+#home-flow {
+	position: relative;
+	width: 100%;
+}
+
+ul.flow-ul::before, ul.flow-ul::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.home-flow-container {
+	position: relative;
+	max-width: 1200px;
+	margin:  auto;
+}
+
+.flow-diagram, .flow-diagram ul, .flow-diagram li {
+	position: relative;
+}
+
+.flow-diagram ul {
+	list-style-type: none;
+	width: 100%;
+	li {
+		width: 40%;
+	}
+}
+.flow-diagram li.left {
+	text-align: right;
+	padding-right: $margin;
+	right: 50%;
+	margin: 0 0 0 60%;
+}
+
+.flow-diagram li.left::before, .flow-diagram li.left::after {
+	content: "";
+	position: absolute;
+	right: -($border-width/2);
+	
+}
+
+.flow-diagram li.left::before {
+	border-top: $border-width solid #000;
+	width: $margin - $space;
+	height: 0;
+}
+.flow-diagram li.left::after {
+	border-left: $border-width solid #000;
+	height: 100%;
+	width: 0px;
+	top: 2px;
+}
+.flow-diagram li.right {
+	left: 50%;
+	margin: 0 60% 0 0;
+	padding-left: $margin;
+}
+.flow-diagram li.right::before, .flow-diagram li.right::after,
+.flow-diagram li.last::before, .flow-diagram li.last::after {
+	content: "";
+	position: absolute;
+	left: -($border-width/2);
+}
+.flow-diagram li.right::before {
+	border-top: $border-width solid #000;
+	width: $margin - $space;
+	height: 0;
+}
+.flow-diagram li.right::after {
+	border-left: $border-width solid #000;
+	height: 100%;
+	width: 0px;
+	top: 2px;
+}
+
+.flow-diagram li.last {
+	width: $last-size;
+	text-align: center;
+	margin: 0 auto;
+}
+.flow-diagram li.last::after {
+	border-left: $border-width solid #000;
+	width: 0px;
+	left: $last-size/2 - $border-width/2;
+}
+
+
+@media screen and (max-width: $mobile-max) {
+	$f-size: 12px;
+	$l-height: 12px;
+	$distance: 30px;
+
+	#home-flow {
+		font-size: $f-size;
+		line-height: $l-height;
+	}
+	.flow-diagram li.left::before,
+	.flow-diagram li.right::before {
+		top: $distance/2;
+	}
+
+	.flow-diagram li.last {
+		padding: $f-size/2 0 0 0;
+		top: $distance + 2px;
+	}
+
+	.flow-diagram li.last::after {
+		height: $distance;
+		top: -$distance;
+	}
+	
+
+}
+@media screen and (min-width: $tab-min) and (max-width: $tab-max) {
+	$f-size: 16px;
+	$l-height: 16px;
+	$distance: 40px;
+
+
+	#home-flow {
+		font-size: $f-size;
+		line-height: $l-height;
+	}
+	.flow-diagram li.left::before,
+	.flow-diagram li.right::before {
+		top: $distance/2;
+	}
+
+	.flow-diagram li.last {
+		padding: $f-size/2 0 0 0;
+		top: $distance + 2px;
+	}
+
+	.flow-diagram li.last::after {
+		height: $distance;
+		top: -$distance;
+	}
+
+
+}
+@media screen and (min-width: $comp-min) {
+	$f-size: 18px;
+	$l-height: 20px;
+	$distance: 60px;
+
+	#home-flow {
+		font-size: $f-size;
+		line-height: $l-height;
+	}
+	.flow-diagram ul {
+		min-height: 430px;
+	}
+
+	.flow-diagram li.left::before,
+	.flow-diagram li.right::before {
+		top: $distance/2;
+	}
+
+	.flow-diagram li.last {
+		padding: $f-size/2 0 0 0;
+		top: $distance + 2px;
+	}
+
+	.flow-diagram li.last::after {
+		height: $distance;
+		top: -$distance;
+	}
+	.flow-diagram li {
+		padding-top: $distance/3;
+	}
+}
+
+
+
+
+

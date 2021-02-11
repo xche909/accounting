@@ -1,0 +1,50 @@
+/*_banner_video2.scss*/
+
+@media screen {
+	/*.container-banner-video {
+		height: 100vh;
+	}*/
+
+	.translateXY {
+		@include prefix(transform, translateX(-50%) translateY(-50%), webkit ms o moz );
+
+	}
+	video#vidbg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		@extend .translateXY;
+		/*background: url(../img/videobg.jpg) no-repeat;*/
+		background-size: cover;
+		opacity: 0.5;
+	}	
+
+}
+
+@media screen and (max-width: $mobile-max) {
+#vidbg {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $tab-min) and (max-width: $tab-max) {
+	.container-banner-video {
+		height: 80vh;
+		min-height: 50vw;
+		max-height: 420px;
+	} 
+	video#vidbg {
+		top: 50%;}
+
+}
+@media screen and (min-width: $comp-min) {
+	.container-banner-video {
+		height: 90vh;
+		min-height: 50vw;
+	}
+}

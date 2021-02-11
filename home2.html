@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accounting Career Connect</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js?newversion"></script>
+	<script>
+		window.onscroll = function() {menuchangeonscroll()};
+		window.onresize = function() {menuchangeonresize()};
+	</script>
+</head>
+<body>
+	<div class="intake color1 ">
+		The Next Intake Starts on 29th-October-2018 in NZ. Secure Your Seat Now!
+	</div>
+	<div id="intake" class="intake color2">
+		 <span class="intake-decoration">FREE INFORMATION SESSION:</span> Every Saturday at 10am at Unit C 363 East Tamaki Road, Auckland.
+	</div>
+	<div id="intake" class="intake color2">
+		<span class="intake-decoration">FREE INFORMATION SESSION:</span> Every Sunday at 11am at 60 Cook Street, Auckland. 
+	</div>
+	<header id="header" class="headeroffscroll">
+		<div class="container">
+			<nav id="nav" class="nav navoffscroll">				
+				<img src="img/logotop.jpg" alt="Accounting Career Connect" id="brand-image" onclick="gotourl('/home.html')">
+				<div id="menu-container">			
+					<ul id="mainmenu-list">
+						<li class="mainmenu-option nav-li" value="Refresh Page" onClick="window.location.reload()">
+							<a class="nav-link expand hover-1">Home</a></li>
+						<li class="mainmenu-option nav-li" onclick="openpage('pages/about.html','pagebody','img/about.jpg')";>
+							<a class="nav-link expand hover-1">About Us</a></li>
+						<li class="mainmenu-option nav-li" onclick="openpage('pages/prog.html','pagebody','img/apply.jpg')";>
+							<a class="nav-link expand hover-1">Programmes</a></li>
+						<li id="dropdownselect" onclick="openpage('pages/services.html','pagebody','img/whowearebg.jpg')";>
+							<a id="dropdownselecta" class="nav-link expand hover-1">Services</a>
+							<ul id="dropdownmenu" class="ddmclosed">
+								<li class="dropdown-opt">
+									<a href="#1" class="hover-2">11111</a></li>
+								<li class="dropdown-opt">
+									<a href="#2"  class="hover-2">222222</a></li>
+<!-- 								<li class="dropdown-opt">
+									<a href="#3"  class="hover-2">3333333</a></li>
+								<li class="dropdown-opt">
+									<a href="#4"  class="hover-2">444444</a></li> -->
+							</ul>
+						</li>
+						<li class="mainmenu-option nav-li" onclick="openpage('pages/testimonial.html','pagebody','img/testimonials.jpg')";>
+							<a class="nav-link expand hover-1">Testimonials</a></li>
+						<li class="mainmenu-option nav-li" onclick="openpage('pages/faq.html','pagebody','img/faq.jpg')";>
+							<a class="nav-link expand hover-1">FAQ</a></li>
+						<li class="mainmenu-option nav-li" onclick="openpage('pages/contact.html','pagebody','img/contactus.jpg')";>
+							<a class="nav-link expand hover-1">Contact Us</a></li>
+						<li class="mainmenu-option nav-li" onclick="openpage('pages/apply.html','pagebody','img/1.jpg')";>
+							<a class="nav-link expand hover-1">Apply</a></li>
+					</ul>
+					<a href="javascript:void(0);" class="toggle-nav" >
+						<i class="fa fa-bars"></i></a>	
+				</div>						
+			</nav>
+		</div>
+	</header>
+	<div id="pagebody">
+		<div id="banner-video">
+			<div class="container-banner-video">
+				<!-- <video playsinline autoplay muted loop poster="" id="vidbg">
+					<source src="../individual_components/img/vid.mp4" type="video/webm">
+						<source src="polina.mp4" type="video/mp4">
+				</video> -->
+				
+					<iframe id="iframe-banner-video" width="100%" height="100%" src="https://www.youtube.com/embed/yYX4bvQSqbo" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> 
+		
+			</div>
+		</div>
+<!-- in template complete -->
+		<div id="home-services">	
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<img src="img/empl-icon.png" alt="Graduate Icon" class="home-service-icon">
+						<h2 class="home-service-heading">EMPLOYERS</h2>
+						<p class="home-service-para">Are you an emplyer looking for a trained and experienced employee?</p>
+					</div>
+					<div class="flip-box-back">
+						<h2 class="home-service-heading">GET AN PERSONALISED SERVICE , FREE OF COST</h2>
+						<a href="#" class="btn-services">CLICK HERE</a>
+					</div>
+				</div>
+			</div>
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<img src="img/grad-icon.png" alt="Graduate Icon" class="home-service-icon">
+						<h2 class="home-service-heading">GRADUATES</h2>
+						<p class="home-service-para">Are you a fresh Accounting or Business graduate looking for a job opportunity?</p>
+					</div>
+					<div class="flip-box-back">
+						<h2 class="home-service-heading">GET A HANDS-ON JOB READY OPPORTUNITY.</h2>
+						<a href="#" class="btn-services">CLICK HERE</a>
+					</div>
+				</div>
+			</div>		
+		</div>
+
+		<div id="banner-intro">
+			<div class="container">
+				<h1 class="banner-heading">Our BAS Accountant job ready program has helped many graduates successfully start an accounting job & career in New Zealand in both CA and commercial environment.</h1>
+				<!-- <p class="banner-para">Over the last 5 years, Industry Connect has become the default choice for <strong>IT graduates</strong> and <strong>new immigrants</strong> wanting to enter the local software industry.</p> -->
+			</div>
+		</div>
+
+		<div id="home-about">
+			<div class="home-about-container">
+				<div class="home-about">
+					<h2 class="home-about-h2">About Us</h2>
+					
+					<p class="home-about-text">
+					Accounting Career Connect creates a solution to bridge the gap between graduates and employers, through mentorship to enhance the right attitude, skills, and knowledge needed on actual performance of job. It blends the experiences of today&#39;s business leader with tomorrow&#39;s- creating THE FUTURE TO BE NOW.</p>
+
+					<p class="home-about-text">
+					We aim to place successful business, accounting, and finance GRADUATES to employers that matches their abilities.</p>
+
+					<p class="home-about-text">
+					We help our partner EMPLOYERS to grow their company in choosing the right candidate who can have leadership and efficiently undertake a role.</p>
+				
+				</div>
+				<div class="home-about">
+					<div class="home-about-container about-section-padding">
+						<div class="flex-cont">
+							<div class="circle-container">
+								<p class="circle">25</p>
+								<p class="circle-para">Our<br>Graduates</p>
+							</div>
+							<div class="circle-container">
+								<p class="circle">15</p>
+								<p class="circle-para">Emplyers<br>With Us</p>
+							</div>
+							<div class="circle-container">
+								<p class="circle">25</p>
+								<p class="circle-para">Graduates<br>Placed</p>
+							</div></div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div id="section1">
+			<div class="container">
+				<h2 class="section1-h2">How it works</h2>
+
+				<p class="section1-h2-sub">The Accounting Career Connect Way</p>
+
+				<p class="section1-p-intro">Get Your career started in Accountancy.</p>
+
+					<div id="home-flow">
+						<div class="home-flow-container">
+							<div class="flow-diagram">
+								<ul class="flow-ul">
+									<li class="left">Students trained for 3-6months</li>
+									<li class="right">Attend interview skills coaching sessions prior to interviews</li>
+									<li class="left">Continue to attend interviews until you are successful and sign contract with employer</li>
+									<li class="right">Arranges Commission for Job Placement fee for ACCL paid 
+				monthly aligning with your salary</li>
+									<li class="last">Job</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+				<div class="flex-row">
+				<a class="btn color-red-red" href="#">apply now</a>
+				<a class="btn color-white-blue" a href="#">case studies</a></div>
+				
+			</div>
+		</div>
+
+		<div id="bg-img-div">
+			<div class="bg-img-div-container">
+				<div class="layer">
+				</div>
+			</div>
+			<!-- <p class="layer-head">The Largest Software Job-Ready Boot Camp</p>
+			<p class="layer-para">Founded by Cutting Edge Software Companies in Australia and New Zealand</p> -->
+		</div>
+
+		
+		<div id="home-past-trainee">
+			<div class="home-past-container">
+				<h2 class="sect-testi-h2">Where Our Past Trainees Work Right Now</h2>
+				<div class="flip-box2">
+					<div class="flip-box-inner2">
+						<div class="flip-box-front2">
+							<img src="img/trainee.png" alt="Past trainee photo" class="home-past-trainee-img">
+							<div>
+							<p class="home-trainee-name">Ayesha Pervin</p>
+							<p class="home-trainee-title">Assistant to Chief Financial Officer</p>
+							<p class="home-trainee-cname">Envivo Engineering</p></div>
+						</div>
+						<div class="flip-box-back2">
+							<a href="#">
+								<img src="img/logo.png" alt="company logo" class="home-trainee-clogo">
+								<p class="home-trainee-cname">Envivo Engineering</p><p class="home-trainee-cname">Consulting company, Auckland</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-box2">
+					<div class="flip-box-inner2">
+						<div class="flip-box-front2">
+							<img src="img/trainee.png" alt="Past trainee photo" class="home-past-trainee-img">
+							<div>
+							<p class="home-trainee-name">Ayesha Pervin</p>
+							<p class="home-trainee-title">Assistant to Chief Financial Officer</p>
+							<p class="home-trainee-cname">Envivo Engineering</p>
+							</div>
+						</div>
+						<div class="flip-box-back2">
+							<a href="#">
+								<img src="img/logo.png" alt="company logo" class="home-trainee-clogo">
+								<p class="home-trainee-cname">Envivo Engineering</p><p class="home-trainee-cname">Consulting company, Auckland</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-box2">
+					<div class="flip-box-inner2">
+						<div class="flip-box-front2">
+							<img src="img/trainee.png" alt="Past trainee photo" class="home-past-trainee-img">
+							<div>
+							<p class="home-trainee-name">Ayesha Pervin</p>
+							<p class="home-trainee-title">Assistant to Chief Financial Officer</p>
+							<p class="home-trainee-cname">Envivo Engineering</p>
+							</div>
+						</div>
+						<div class="flip-box-back2">
+							<a href="#">
+								<img src="img/logo.png" alt="company logo" class="home-trainee-clogo">
+								<p class="home-trainee-cname">Envivo Engineering</p><p class="home-trainee-cname">Consulting company, Auckland</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-box2">
+					<div class="flip-box-inner2">
+						<div class="flip-box-front2">
+							<img src="img/trainee.png" alt="Past trainee photo" class="home-past-trainee-img">
+							<div>
+							<p class="home-trainee-name">Ayesha Pervin</p>
+							<p class="home-trainee-title">Assistant to Chief Financial Officer</p>
+							<p class="home-trainee-cname">Envivo Engineering</p>
+							</div>
+						</div>
+						<div class="flip-box-back2">
+							<a href="#">
+								<img src="img/logo.png" alt="company logo" class="home-trainee-clogo">
+								<p class="home-trainee-cname">Envivo Engineering</p><p class="home-trainee-cname">Consulting company, Auckland</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-box2">
+					<div class="flip-box-inner2">
+						<div class="flip-box-front2">
+							<img src="img/trainee.png" alt="Past trainee photo" class="home-past-trainee-img">
+							<div>
+							<p class="home-trainee-name">Ayesha Pervin</p>
+							<p class="home-trainee-title">Assistant to Chief Financial Officer</p>
+							<p class="home-trainee-cname">Envivo Engineering</p>
+							</div>
+						</div>
+						<div class="flip-box-back2">
+							<a href="#">
+								<img src="img/logo.png" alt="company logo" class="home-trainee-clogo">
+								<p class="home-trainee-cname">Envivo Engineering</p><p class="home-trainee-cname">Consulting company, Auckland</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-box2">
+					<div class="flip-box-inner2">
+						<div class="flip-box-front2">
+							<img src="img/trainee.png" alt="Past trainee photo" class="home-past-trainee-img">
+							<div>
+								<p class="home-trainee-name">Ayesha Pervin</p>
+								<p class="home-trainee-title">Assistant to Chief Financial Officer</p>
+								<p class="home-trainee-cname">Envivo Engineering</p>
+							</div>
+						</div>
+						<div class="flip-box-back2">
+							<a href="#">
+								<img src="img/logo.png" alt="company logo" class="home-trainee-clogo">
+								<p class="home-trainee-cname">Envivo Engineering</p><p class="home-trainee-cname">Consulting company, Auckland</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-box2">
+					<div class="flip-box-inner2">
+						<div class="flip-box-front2">
+							<img src="img/trainee.png" alt="Past trainee photo" class="home-past-trainee-img">
+							<div>
+							<p class="home-trainee-name">Ayesha Pervin</p>
+							<p class="home-trainee-title">Assistant to Chief Financial Officer</p>
+							<p class="home-trainee-cname">Envivo Engineering</p>
+							</div>
+						</div>
+						<div class="flip-box-back2">
+							<a href="#">
+								<img src="img/logo.png" alt="company logo" class="home-trainee-clogo">
+								<p class="home-trainee-cname">Envivo Engineering</p><p class="home-trainee-cname">Consulting company, Auckland</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="home-partners">
+			<div  class="home-partner-container">
+				<h2 class="sect-testi-h2">Our Trainees Employers & Employer Partners</h2>
+				<div class="logo-wrapper">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+					<img src="img/logo-ph.png" class="logo-img">
+				</div>
+			</div>	
+		</div>
+
+
+		<div id="section-testimonial">
+			<div class="section-testimonial-container">
+				<h2 class="sect-testi-h2">Our Trainees' Success Stories</h2>
+				
+				<div class="gallery">
+					<div class="gallery-container">
+						<div class="gallery-item">
+							<img class="gallery-i-img" src="img/1.jpg" >
+							<p class="gallery-i-p">Some text for image</p>
+						</div>
+
+						<div class="gallery-item">
+							<img class="gallery-i-img" src="img/1.jpg" >
+							<p class="gallery-i-p">Some text for image</p>
+							
+						</div>
+
+						<div class="gallery-item">
+							<img class="gallery-i-img" src="img/1.jpg" >
+							<p class="gallery-i-p">Some text for image</p>
+							
+						</div>
+
+						<div class="gallery-item">
+							<img class="gallery-i-img" src="img/1.jpg" >
+							<p class="gallery-i-p">Some text for image</p>
+							
+						</div>
+						<div class="gallery-item">
+							<img class="gallery-i-img" src="img/1.jpg" >
+							<p class="gallery-i-p">Some text for image</p>
+							
+						</div>
+						<div class="gallery-more">
+							<a class="btn color-white-blue" a href="#">MORE SUCCESS STORIES</a></div>
+							
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div> <!-- pagebody div-->
+	<footer>
+		<p class="footer">Copyright Accounting Career Connect Australia, New Zealand | All Rights Reserved</p>
+	</footer>
+
+	<script type="text/javascript">	
+	document.onclick = function(e) {dropdownmenu()};
+	window.onscroll = function() {headerChanges()};
+
+	jQuery(document).ready(function() { toggleNav();menuchangeonresize();});
+	</script>
+</body>
+</html>

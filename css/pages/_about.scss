@@ -1,0 +1,153 @@
+/*_about.scss*/
+#about {
+	background-color: #fff;
+	padding-bottom: 50px;
+}
+
+.about-h1 {
+	@extend .section1-h2;
+}
+
+.about-h2 {
+	@extend .sect-testi-h2;
+	color: $white;
+}
+
+#about-team {
+	/*background*/
+	position: relative;
+}
+#about-team::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+/*about-layer-container */
+/*.about-layer {*/
+#about-layer-container {
+	min-width: 100vw;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../../individual_components/img/bg-img.jpg) no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+	filter: blur(7px);
+	z-index: -100;
+}
+.about-layer { /*#ff6666*/
+	background-color: rgba(75,128,188,0.6);
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -100;
+
+}
+#team-container {
+	position: relative;
+}
+.team-member {
+	float: left;
+	background-color: lightgrey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.mem-name {
+	@extend .section1-p-intro;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.mem-pos, .mem-loc {
+	@extend .section1-p-text;
+	text-align: center;
+	padding-top: 0;
+	padding-bottom: 0px;
+}
+
+@media screen and (max-width: $mobile-max) {
+	#team-container {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 500px;
+
+	}
+	.team-member {
+		max-width: 340px;
+		width: calc(92%/2);
+		margin: 10px 2%; 
+		height: auto;
+		text-align: center;
+		& > img {
+			width: 60%;
+			max-width: 200px;
+			height: auto;
+			margin: 0 auto;
+		}
+
+		img.contact-mem {
+			width: 20px;
+			height: 20px;
+			margin: 20px 10px 10px 10px;
+		}
+
+	}
+}
+
+@media screen and (min-width: $tab-min) and (max-width: $tab-max) {
+	#team-container {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1100px;
+
+	}
+	.team-member {
+		max-width: 340px;
+		width: calc(91%/3);
+		margin: 10px 1.5%; 
+		height: auto;
+		text-align: center;
+		
+		img.mem-photo {
+			width: 80%;
+			max-width: 200px;
+			height: auto;
+			margin: 0 auto;
+		}
+		img.contact-mem {
+			width: 25px;
+			height: 25px;
+			margin: 20px;
+		}
+	}
+
+}
+@media screen and (min-width: $comp-min) {
+
+	#team-container {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1100px;
+	}
+	.team-member {
+		max-width: 340px;
+		width: calc(88%/3);
+		margin: 10px 2%; 
+		height: auto;
+		text-align: center;
+	}
+
+	img.contact-mem {
+		width: 30px;
+		height: 30px;
+		margin: 20px;
+	}
+}

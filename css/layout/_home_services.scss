@@ -1,0 +1,139 @@
+
+#home-services {
+	position: relative;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#home-services::after, #home-services::before {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.flip-box {
+	background-color: transparent;
+	perspective: 1000px;
+	float: left;
+	overflow: hidden;
+}
+
+.flip-box-inner {
+	position: relative;
+	width: 100%;
+	/*height: 200px;*/
+	text-align: center;
+	transition: transform 0.4s;
+	transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+
+.flip-box-front {
+	background-color: #d6d4e0;
+	color: black;
+}
+
+.flip-box-back {
+	background-color: $white;
+	border: 2px solid #d6d4e0;
+	transform: rotateY(180deg);
+}
+.flip-box-back, h2.home-service-heading, p.home-service-para {
+	color: $darkgreyfont;
+}
+
+a.btn-services {
+	@extend .btn;
+	color: $white;
+	background-color: maroon;
+}
+
+
+@media screen and (max-width: 767px) {
+
+
+	.flip-box {
+		width: 96%;
+		margin: 0.5% 2%;
+	}
+	.flip-box-inner {
+		height: 150px;
+	}
+	img.home-service-icon {
+		width: 50px;
+		height: 50px;
+	}
+	h2.home-service-heading {
+		font-size: 110%;
+		line-height: 130%;
+	}
+	p.home-service-para {
+		font-size: 80%;
+		line-height: 130%;
+		padding: 0px 10px ;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: $tab-max) {
+
+	.flip-box {
+		width: calc(96%/2);
+		margin: 1%;
+	}
+	.flip-box-inner {
+		height: 200px;
+	}
+	img.home-service-icon {
+		width: 60px;
+		height: 60px;
+	}
+	h2.home-service-heading {
+		font-size: 120%;
+		line-height: 130%;
+	}
+	p.home-service-para {
+		font-size: 90%;
+		line-height: 130%;
+		padding: 0px 10px;
+	}
+}
+@media screen and (min-width: $comp-min) {
+
+	.flip-box {
+		width: calc(92%/2);
+		margin: 2%;
+	}
+	.flip-box-inner {
+		height: 220px;
+	}
+
+	img.home-service-icon {
+		width: 80px;
+		height: 80px;
+	}
+	h2.home-service-heading {
+		font-size: 130%;
+		line-height: 130%;
+	}
+	p.home-service-para {
+		font-size: 90%;
+		line-height: 130%;
+		padding: 0px 10px;
+	}
+}

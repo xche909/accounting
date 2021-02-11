@@ -1,0 +1,18 @@
+/*mixin for cross browser property set up*/
+@mixin prefix($property, $value, $prefixes: ()) {
+	@each $prefix in $prefixes {
+		#{'-' + $prefix + '-' + $property}: $value;
+	}
+	#{$property}: $value;
+}
+
+@mixin color-bg($color-name, $color-bg) {
+	color: #{$color-name};
+	background-color: #{$color-bg};
+} 
+/*example*/
+/*.selector {
+		/*@include prefix(transition, all 0.4s ease, webkit ms o moz );*/
+	/*@include prefix(transform, rotate(45deg), webkit ms);*/
+
+

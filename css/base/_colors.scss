@@ -1,0 +1,43 @@
+@import "_mixins.scss";
+@import "_base";
+
+$white: #fff;
+$black: #000;
+$orange: #e86a3a;
+$darkblue: #0B3C5D;
+$skyblue: #328CC1;
+$gold: #D9B310;
+$lightblack: #1D2731;
+$lightgreyfont: #6c747a;
+$darkgreyfont: #40364d;
+$header-bg-color: $darkblue;
+$menu-link-f-color: $white;
+$active-menu-link-bg-color: $white;
+$active-menu-link-f-color: maroon;
+
+
+%header-color {
+	background-color: $white;
+	color: $darkgreyfont;
+}
+%ddm-color {
+	background-color: #E8E8E8;
+	color: $darkgreyfont;	
+}
+%active, .active {
+	background-color: $active-menu-link-bg-color; 
+	color: $active-menu-link-f-color;	
+	@include prefix(transition, all 0.4s ease, webkit ms o moz );
+}
+@mixin color-bg($color-name, $color-bg) {
+	color: #{$color-name};
+	background-color: #{$color-bg};
+} 
+
+.color1{
+	@include color-bg(white, #5b9aa0);
+}
+
+.color2 {
+	@include color-bg(black, #d6d4e0);
+}

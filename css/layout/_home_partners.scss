@@ -1,0 +1,48 @@
+/*_home_partners.scss*/
+
+
+#home-partners {
+	width: 100%;
+}
+@media screen {
+	.home-partner-container {
+		width: 100%;		
+		margin: 0 auto;
+		padding: 0;
+	}
+	.logo-wrapper {
+		width: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: $mobile-max) {
+	.home-partner-container {
+		max-width: 490px;
+	}
+	.logo-img {
+		width: 60px;
+		height: 60px;
+	}
+}
+@media screen and (min-width: $tab-min) and (max-width: $tab-max) {
+	.home-partner-container {
+		max-width: 850px;
+	}
+	.logo-img {
+		width: 80px;
+		height: 80px;
+	}
+}
+@media screen and (min-width: $comp-min) {
+	.home-partner-container {
+		max-width: 1100px;
+	}
+	.logo-img {
+		width: 100px;
+		height: 100px;
+	}
+}

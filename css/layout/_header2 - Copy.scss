@@ -1,0 +1,524 @@
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;	
+}
+.fixedheight {
+	height: 50px !important;
+	line-height: 50px !important;
+}
+.autoheight {
+	height: auto !important;
+}
+.transition {
+	@include prefix(transition, all 0.4s ease, webkit ms o moz );
+}
+.intake {
+	position: relative;
+	z-index: 50;
+	padding: 5px;
+	border-bottom: 1px $white solid;
+	text-align: center;
+}
+
+.intake-decoration {
+	color: red;
+	-webkit-animation: flash linear 1s infinite;
+	animation: flash linear 1s infinite;
+}
+
+@-webkit-keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+header {
+	position: relative;
+	width: 100%;
+	@extend .transition;
+	z-index: 50;
+}
+#header {
+	/*position: fixed;
+	top: 0;*/
+	@extend %header-color;
+}
+
+.container {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	height: auto;
+	&::after {
+		clear: both;
+		content: "";
+		display: block;	}
+	&::before {
+		clear: both;
+		content: "";
+		display: block;	}
+}
+
+#nav {
+	width: 100%;
+	@extend header;
+	@extend .transition;
+	img {		
+		height: 100%;
+		float: left;
+	}
+	#menu-container {
+		float: right;
+		@extend .transition;
+
+	}
+}
+/*same*/
+ul#mainmenu-list {	
+	list-style-type: none;	
+	@extend header;	
+	@extend .transition;
+	& > li:hover, & > li:active {
+		@extend %active;
+	}
+	& > li {
+		position: relative;
+		@extend %header-color;
+		@extend .transition;
+		text-decoration: none;
+		text-align: center;
+		cursor: pointer;
+		& > a {
+			@extend %a-common;
+			/*@extend .transition;*/
+		}
+	}
+}
+ul#dropdownmenu {
+	z-index: 200;
+	list-style-type: none;
+	text-align: center;
+	/*filter: brightness(0.85);	*/
+	margin: 0;
+	padding: 0;
+
+	& > li.dropdown-opt {
+		z-index: 200;
+		width: 100%;
+		text-decoration: none;
+		height: 50px;
+		line-height: 50px;
+		/*border-bottom:1px #999 solid; */
+		cursor: pointer;
+		display: block !important;
+		opacity: 1;		
+		& > a {
+			@extend %a-common;	
+			@extend %header-color;
+		}
+	
+		&:hover, &:active  {
+			text-decoration: none;
+			z-index: 200;
+			@extend %active;
+			opacity: 1;
+			cursor: pointer;
+			& > a{
+				@extend %active;
+			}
+
+		}
+	}
+}
+
+/*ul.ddmclosed {*/
+ul.ddmclosed {
+	height: 0;
+	overflow: hidden;
+}
+/*same*/
+/*ul.ddmopened {*/
+ul.ddmopened {
+	height: auto; 
+	min-height: 165px;
+	overflow: hidden;
+	display: block !important;
+	opacity: 1;
+}
+.nav-link {
+	display: block;
+}
+.toggle-nav {
+	@extend .transition;
+}
+
+/*---------------------------------------------------------------------*/
+/*for mobile and tab both*/
+/*---------------------------------------------------------------------*/
+@media screen and (max-width: $tab-max) {
+	.headeroffscroll {
+		height: 50px ;			
+	}
+	/*same check*/
+	.navoffscroll {
+		height: 50px;	
+		ul#mainmenu-list > li {
+			height: 50px;
+		}	
+	}
+			
+	.headeronscroll {
+		height: 50px;
+	}
+
+	.navonscroll {
+		height: 50px;
+		ul#mainmenu-list > li {
+			height: 50px;
+		}
+	}
+	
+	$main-menu-margin: 0;
+	
+	#nav {
+		display: inline-block;
+
+	}
+	.toggle-nav {
+		float: right;
+		display: inline-block;
+	}
+
+	.toggle-nav:hover, .toggle-nav.active {
+		background-color: $active-menu-link-bg-color; 
+		color: $active-menu-link-f-color;	
+	}
+	.container {
+		width: 100%;
+	}
+
+	ul#mainmenu-list {
+		overflow: hidden;
+		top: 50px;
+		& > li {
+			width: 100%;
+			margin: 0;
+			border-radius: 0;
+		}
+	}
+	li.mainmenu-option, a#dropdownselecta {	
+		/*border-bottom: #999 solid 0.5px;*/
+	}
+
+	li.dropdownselect {
+		border-bottom: none;
+	}
+
+	ul#mainmenu-list,
+	#nav:active ul#mainmenu-list,
+	#nav ul#dropdownmenu,
+	#nav:active ul#dropdownmenu {
+		display: none;
+		position: absolute;
+		right: 0px;			/* /// */
+		padding: 0px;
+		background-color: $active-menu-link-bg-color; 
+		color: $active-menu-link-f-color;	
+/*		@include prefix(transition, all 0.4s ease, webkit ms o moz );*/
+	}
+	ul#dropdownmenu {
+		position: relative !important;
+		width: 100%;/* /// */
+
+		& > li.dropdown-opt  {
+			width: 100%;
+			/*border-bottom:1px #999 solid; */
+			display: block !important;
+			margin-bottom: 1px;
+
+			& > a {
+				/*margin-bottom: 1px;
+				margin-top: 1px;*/
+			}
+		}
+	}
+/*---------------------------------------------------------------------*/
+li.dropdown-opt, li.mainmenu-option, li#dropdownselect {
+	& > a {
+		/*--------------------*/
+		position: relative;
+		display: inline-block;
+
+		&:before {
+			position: absolute;
+			bottom: 0px;
+			content: "";
+			width: 0;
+			height: 1px;
+			transition: all 0.2s ease-in-out;
+			transition-duration: 0.3s;
+			opacity: 0;
+		}
+
+		&.hover-2, &.hover-1 {
+			&:before {
+				left: calc(0%);
+				background-color: maroon;
+			}			
+		}
+	}
+	&:hover {
+		cursor: pointer;
+
+		a.hover-2, a.hover-1 {
+			background-color: #fff;
+			&:before {
+				width: 100%;
+				opacity: 1;
+			}
+
+			&.hover-2, &.hover-1 {
+				&:before {
+				/*&:before,
+				&:after {*/
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+	#nav:hover ul.active {
+		display: block !important;
+		background-color: $active-menu-link-bg-color; 
+		color: $active-menu-link-f-color;	
+		@include prefix(transition, all 0.4s ease, webkit ms o moz );	
+		& > li {
+			display: block !important;
+		}
+	}
+	ul#ddmopened {
+		position: relative;
+	}
+
+
+
+}
+
+/*for mobile only*/
+/*---------------------------------------------------------------------*/
+@media screen and (max-width: $mobile-max) {
+	a.toggle-nav {
+		padding: 8px 15px;	/* /// */
+		font-size: 30px;	/* /// */
+	}
+	ul#mainmenu-list {
+		width: 100%;			/* /// */
+	}
+	
+	
+}
+
+
+/*---------------------------------------------------------------------*/
+/*for tab only*/
+/*---------------------------------------------------------------------*/
+@media screen and (min-width: $tab-min) and (max-width: $tab-max) {
+	a.toggle-nav {
+		padding: 8px 15px;	/* /// */
+		font-size: 30px;	/* /// */
+	}
+	ul#mainmenu-list {
+		width: 300px;			/* /// */
+	}
+	
+	
+}
+/*---------------------------------------------------------------------*/
+/*for computer large screen only*/
+/*---------------------------------------------------------------------*/
+
+@media screen and (min-width: $comp-min) {
+	$main-menu-margin: 10px;
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	#nav {
+		display: block;
+	}
+
+	.toggle-nav {
+		display: none;
+	}
+	ul#mainmenu-list {
+		& > li {
+			position: relative; /*new*/
+			float: left;
+			margin: $main-menu-margin 0 0 0;
+			width: 120px;			
+			/*border-right: #999 solid 1px;*/
+			/*border-radius: 0 10px 0 0;*/
+			cursor: pointer;
+
+			& > a {
+				position: relative;
+				display: inline-block;
+
+				&:before, &:after {
+					position: absolute;
+					top: 5px;
+					content: "";
+					width: 0;
+					height: 2px;
+					transition: all 0.2s ease-in-out;
+					transition-duration: 0.3s;
+					opacity: 0;
+
+				}
+
+				&.hover-1 {
+					&:before {
+						left: calc(50%);
+						background-color: maroon;
+					}
+					&:after {
+						right: calc(50%);
+						background-color: maroon;
+					}					
+				}
+			}
+			&:hover {
+				cursor: pointer;
+
+				&>a {
+					background-color: #fff;
+					&:before, &:after {
+						width: 100%;
+						opacity: 1;
+					}
+
+					&.hover-1 {
+						&:before,
+						&:after {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+	/*---------- dropdown list  ----------*/ 
+
+	li.dropdown-opt {
+		& > a {
+
+	 		display: flex;
+	 		justify-content: center;
+	 		align-items: center;
+			text-decoration: none;	
+
+			/*--------------------*/
+
+			position: relative;
+			display: inline-block;
+
+			&:before {
+				position: absolute;
+				bottom: 5px;
+				content: "";
+				width: 0;
+				height: 2px;
+				transition: all 0.2s ease-in-out;
+				transition-duration: 0.3s;
+				opacity: 0;
+			}
+
+			&.hover-2 {
+				&:before {
+					left: calc(0%);
+					background-color: maroon;
+				}			
+			}
+		}
+		&:hover {
+			cursor: pointer;
+
+			a.hover-2 {
+				background-color: #fff;
+				&:before {
+					width: 100%;
+					opacity: 1;
+				}
+
+				&.hover-2 {
+					&:before {
+					/*&:before,
+					&:after {*/
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+/*--------------------*/
+
+
+
+	/*---------- dropdown list  ----------*/ 
+	
+	.headeroffscroll {
+		height: 100px;			
+	}
+	/*same check*/
+	.navoffscroll {
+		height: 100px;
+		ul#mainmenu-list > li {
+			height: 90px;
+			line-height: 90px;
+		}	
+	}
+			
+	.headeronscroll {
+		height: 60px;
+	}
+
+	/*same check*/
+	.navonscroll {
+		height: 60px;
+
+		ul#mainmenu-list > li {
+			line-height: 50px;
+			height: 50px;
+		}
+	}	
+	ul#dropdownmenu {
+		position: relative;
+		width: 130px;
+
+		& > li.dropdown-opt {
+			height: 50px;
+			line-height: 50px;
+			margin-bottom: 0.4px
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
